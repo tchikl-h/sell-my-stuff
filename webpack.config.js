@@ -3,6 +3,7 @@ var config = {
   entry: ["./src/app.tsx"],
   output: {
     path: path.resolve(__dirname, "build"),
+    publicPath: '/',
     filename: "bundle.js"
   },
   resolve: {
