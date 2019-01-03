@@ -22,7 +22,7 @@ export default class Gallery extends React.Component {
     ]
  
     return (
-      <ImageGallery items={images}/>
+      <ImageGallery items={images} showPlayButton={false} showThumbnails={false} showBullets={true}/>
     );
   }
 }
