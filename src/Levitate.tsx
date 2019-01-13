@@ -29,7 +29,7 @@ export class Levitate extends React.Component<any> {
     fall: {
       y: 5000,
       transition: {
-        duration: 4000
+        duration: 6000
       }
     },
     
