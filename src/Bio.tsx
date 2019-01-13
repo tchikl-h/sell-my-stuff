@@ -1,12 +1,12 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import Gallery from './Gallery';
 import SplitText from 'react-pose-text';
 import posed from 'react-pose';
+import {Levitate} from './Levitate';
 import NavBar from './NavBar';
 
-export default class Stuff extends React.Component<any> {
-  state = {fontSize: 144, changeOpacity: false, isMobile: false}
+export default class Bio extends React.Component<any> {
+  state = {fontSize: 144, changeOpacity: false, imgSize: 20}
 
   constructor(props) {
     super(props);
@@ -20,11 +20,11 @@ export default class Stuff extends React.Component<any> {
 
   SetSize() {
     if (window.innerWidth > window.innerHeight) { // isBrowser
-      this.setState({isMobile: false});
+      this.setState({imgSize: window.innerWidth / 5});
       this.setState({fontSize: window.innerHeight / 10});
     }
     else { // isMobile
-      this.setState({isMobile: true});
+      this.setState({imgSize: window.innerHeight / 5});
       this.setState({fontSize: window.innerWidth / 10});
     }
   }
@@ -68,22 +68,23 @@ export default class Stuff extends React.Component<any> {
     })
     return (
     <div>
-      <div>
-        <NavBar {...this.props} backButton={true}/>
-      </div>
+      <NavBar {...this.props} backButton={true}/>
       <div className="pixelFont" style={{fontSize: `${this.state.fontSize}px`, position: "absolute", textAlign: "center", top: "10%", width: "100%", fontWeight: "bold"}}>
         <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
-          Item of the week
+          About me
         </SplitText>
       </div>
       <div className="pixelFont" style={{fontSize: `${this.state.fontSize / 1.5}px`, position: "absolute", top: "30%", textAlign: "center", width: "100%"}}>
         <SplitText pose={this.state.changeOpacity ? "visible" : "invisible"} charPoses={charPoses}>
-          Sell my smartphone for more than 1500 SEK and keep the difference
+          I am just a lazy student who wants his stuff to be sold by others
         </SplitText>
       </div>
-      <div style={{position: "absolute", top: "50%", left: "50%", transform: "translateX(-50%)", width: this.state.isMobile ? "90%" : `${window.innerHeight * 0.664}px`}}>
-        <Gallery/>
-      </div>
+      <Levitate
+        src="./images/moi-ballons.png"
+        style={{height: `${this.state.imgSize}px`, position: "absolute", top: "50%", left: "40%"}}
+        randomDuration={Math.floor(Math.random()*1000) + 2000}
+        randomPos={20}
+      />
       <div className="pixelFont" style={{fontSize: `${this.state.fontSize / 3}px`, position: "absolute", top: "95%", textAlign: "center", width: "100%"}}>
         <SplitText pose={this.state.changeOpacity ? "visible" : "invisible"} charPoses={charPoses}>
           If you are interested, you can contact me at herve.tchikladze@epitech.eu

@@ -30,10 +30,10 @@ export class ButtonSlide extends React.Component<any> {
   BuildItem() {
     this.SetSize();
     this.Slide = posed.div({
-      exit: { opacity: 0, y: window.innerHeight / 2 + window.innerHeight / 10 },
+      exit: { opacity: 0, y: window.innerHeight / 2 + window.innerHeight / 10 + window.innerHeight / 10 },
       enter: {
           opacity: 1,
-          y: window.innerHeight / 2,
+          y: window.innerHeight / 2 + window.innerHeight / 10,
       }
     });
   }
@@ -59,7 +59,7 @@ export class ButtonSlide extends React.Component<any> {
     return (
       <div>
         <this.Slide pose={this.state.changePos ? "enter" : "exit"}>
-          <Button style={{fontFamily: "Pixel", fontSize: `${this.state.fontSize+5}px`, width: `${this.state.width}px`, height: `${this.state.height}px`, backgroundColor: "#7AD3CF", position: "absolute", top: "55%", left: "50%", transform: "translateX(-50%)"}} variant="contained" onClick={() => {this.props.history.push(`/stuff`)}}>
+          <Button style={{fontFamily: "Pixel", fontSize: `${this.state.fontSize+5}px`, width: `${this.state.width}px`, height: `${this.state.height}px`, backgroundColor: "#7AD3CF", position: "absolute", top: "60%", left: "50%", transform: "translateX(-50%)"}} variant="contained" onClick={() => {this.props.history.push(`/stuff`)}}>
             {this.props.content}
           </Button>
         </this.Slide>

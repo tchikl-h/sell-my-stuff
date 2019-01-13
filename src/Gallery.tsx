@@ -8,17 +8,21 @@ export default class Gallery extends React.Component {
  
     const images = [
       {
-        original: 'http://lorempixel.com/1000/600/nature/1/',
-        thumbnail: 'http://lorempixel.com/250/150/nature/1/',
+        original: 'https://nsa39.casimages.com/img/2019/01/13/190113094729468399.png',
+        thumbnail: 'https://nsa39.casimages.com/img/2019/01/13/190113094729468399.png',
       },
       {
-        original: 'http://lorempixel.com/1000/600/nature/2/',
-        thumbnail: 'http://lorempixel.com/250/150/nature/2/'
+        original: 'https://nsa39.casimages.com/img/2019/01/13/190113094730887114.png',
+        thumbnail: 'https://nsa39.casimages.com/img/2019/01/13/190113094730887114.png',
       },
       {
-        original: 'http://lorempixel.com/1000/600/nature/3/',
-        thumbnail: 'http://lorempixel.com/250/150/nature/3/'
-      }
+        original: 'https://nsa39.casimages.com/img/2019/01/13/190113094728263042.png',
+        thumbnail: 'https://nsa39.casimages.com/img/2019/01/13/190113094728263042.png',
+      },
+      {
+        original: 'https://nsa39.casimages.com/img/2019/01/13/190113094726921427.jpg',
+        thumbnail: 'https://nsa39.casimages.com/img/2019/01/13/190113094726921427.jpg',
+      },
     ]
  
     return (

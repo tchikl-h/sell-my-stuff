@@ -6,7 +6,8 @@ import Button from '@material-ui/core/Button';
 import disableScroll from 'disable-scroll';
 import SplitText from 'react-pose-text';
 import {ButtonSlide} from './ButtonSlide';
-import './Font.scss';
+import NavBar from './NavBar';
+import './Pixel-font.scss';
 
 export default class Menu extends React.Component<any> {
   state = { fontSize: 144, imgSize: 20, tvHeight: 0, smartphoneHeight: 0, levitationHeight: 20 } // 1/34 hauteur levitate
@@ -59,9 +60,10 @@ export default class Menu extends React.Component<any> {
     };
     return (
     <div>
+      <NavBar {...this.props} backButton={false}/>
       <Rotate 
       src="./images/micro.png"
-      style={{height: `${this.state.imgSize}px`, position: "absolute", top: 0, left: "10%"}}
+      style={{height: `${this.state.imgSize}px`, position: "absolute", top: "5%", left: "10%"}}
       />
       <Levitate
         src="./images/smartphone.png"
@@ -71,7 +73,7 @@ export default class Menu extends React.Component<any> {
       />
       <Levitate
         src="./images/game_console.png"
-        style={{height: `${this.state.imgSize}px`, position: "absolute", bottom: "10%", right: "5%"}}
+        style={{height: `${this.state.imgSize}px`, position: "absolute", bottom: "5%", right: "5%"}}
         randomDuration={Math.floor(Math.random()*1000) + 2000}
         randomPos={this.state.levitationHeight}
       />
@@ -81,7 +83,7 @@ export default class Menu extends React.Component<any> {
         randomDuration={Math.floor(Math.random()*1000) + 2000}
         randomPos={this.state.levitationHeight}
       />
-      <div className="pixelFont" style={{fontSize: `${this.state.fontSize}px`, position: "absolute", top: "50%", transform: "translateY(-100%)", textAlign: "center", width: "100%"}}>
+      <div className="pixelFont" style={{fontSize: `${this.state.fontSize}px`, position: "absolute", top: "55%", transform: "translateY(-100%)", textAlign: "center", width: "100%"}}>
         <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
           Sell my stuff and make money
         </SplitText>
