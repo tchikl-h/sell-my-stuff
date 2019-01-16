@@ -81,13 +81,13 @@ export default class Bio extends React.Component<any> {
       </div>
       <Levitate
         src="./images/moi-ballons.png"
-        style={{height: `${this.state.imgSize}px`, position: "absolute", top: "50%", left: "40%"}}
+        style={{height: `${this.state.imgSize}px`, display: "block", marginTop: `${window.innerHeight/2}px`, marginLeft: "auto", marginRight: "auto"}}
         randomDuration={Math.floor(Math.random()*1000) + 2000}
         randomPos={20}
       />
       <div className="pixelFont" style={{fontSize: `${this.state.fontSize / 3}px`, position: "absolute", top: "95%", textAlign: "center", width: "100%"}}>
         <SplitText pose={this.state.changeOpacity ? "visible" : "invisible"} charPoses={charPoses}>
-          If you are interested, you can contact me at herve.tchikladze@epitech.eu
+          If you are interested to sell this product, you can contact me at herve.tchikladze@epitech.eu
         </SplitText>
       </div>
     </div>

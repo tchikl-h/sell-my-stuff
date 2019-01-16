@@ -10,7 +10,7 @@ import Bio from './Bio';
 ReactDOM.render(
 <div className="application">
   <Helmet>
-    <style>{'body { background-color: #549493; overflow: hidden}'}</style>
+    <style>{'body { background-color: #EBEDEE; overflow: hidden}'}</style>
   </Helmet>
   <NavBar/>
   <Router >

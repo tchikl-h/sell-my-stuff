@@ -59,7 +59,7 @@ export class ButtonSlide extends React.Component<any> {
     return (
       <div>
         <this.Slide pose={this.state.changePos ? "enter" : "exit"}>
-          <Button style={{fontFamily: "Pixel", fontSize: `${this.state.fontSize+5}px`, width: `${this.state.width}px`, height: `${this.state.height}px`, backgroundColor: "#7AD3CF", position: "absolute", top: "60%", left: "50%", transform: "translateX(-50%)"}} variant="contained" onClick={() => {this.props.history.push(`/stuff`)}}>
+          <Button style={{fontFamily: "Pixel", fontSize: `${this.state.fontSize+5}px`, width: `${this.state.width}px`, height: `${this.state.height}px`, backgroundColor: "#FFFFFF", color: "#000000", position: "absolute", top: "60%", left: "50%", transform: "translateX(-50%)"}} variant="contained" onClick={() => {this.props.history.push(`/stuff`)}}>
             {this.props.content}
           </Button>
         </this.Slide>

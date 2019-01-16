@@ -36,7 +36,7 @@ export class Levitate extends React.Component<any> {
   });
   EmbeddedImg = () => (
     <div>
-      <this.Image pose={this.state.isFalling ? 'fall' : this.state.changePos ? 'up' : 'down'} src={this.state.src} style={this.props.style} onClick={() => this.ChangeIsFalling()}/>
+      <this.Image pose={this.state.isFalling ? 'fall' : this.state.changePos ? 'up' : 'down'} src={this.state.src} style={this.props.style}/>
     </div>
   )
 

@@ -61,24 +61,26 @@ export default class Menu extends React.Component<any> {
     return (
     <div>
       <NavBar {...this.props} backButton={false}/>
-      <Rotate 
-      src="./images/micro.png"
-      style={{height: `${this.state.imgSize}px`, position: "absolute", top: "5%", left: "10%"}}
+      <Levitate
+        src="./images/deco3.png"
+        style={{height: `${this.state.imgSize}px`, position: "absolute", top: "0%", left: "0%"}}
+        randomDuration={Math.floor(Math.random()*1000) + 2000}
+        randomPos={this.state.levitationHeight}
       />
       <Levitate
-        src="./images/smartphone.png"
+        src="./images/deco4.png"
         style={{height: `${this.state.imgSize}px`, position: "absolute", top: `${this.state.smartphoneHeight}px`, left: "0%"}}
         randomDuration={Math.floor(Math.random()*1000) + 2000}
         randomPos={this.state.levitationHeight}
       />
       <Levitate
-        src="./images/game_console.png"
+        src="./images/deco1.png"
         style={{height: `${this.state.imgSize}px`, position: "absolute", bottom: "5%", right: "5%"}}
         randomDuration={Math.floor(Math.random()*1000) + 2000}
         randomPos={this.state.levitationHeight}
       />
       <Levitate
-        src="./images/tv.png"
+        src="./images/deco2.png"
         style={{height: `${this.state.imgSize}px`, position: "absolute", top: `${this.state.tvHeight}px`, right: "5%"}}
         randomDuration={Math.floor(Math.random()*1000) + 2000}
         randomPos={this.state.levitationHeight}
