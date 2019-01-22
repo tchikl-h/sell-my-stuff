@@ -78,7 +78,7 @@ export default class Stuff extends React.Component<any> {
       </div>
       <div className="pixelFont" style={{fontSize: `${this.state.fontSize / 1.5}px`, position: "absolute", top: "30%", textAlign: "center", width: "100%"}}>
         <SplitText pose={this.state.changeOpacity ? "visible" : "invisible"} charPoses={charPoses}>
-          Sell my smartphone for more than 1500 SEK and keep the change
+          Sell this smartphone for more than 1500 SEK and keep the change
         </SplitText>
       </div>
       <div style={{position: "absolute", top: "50%", left: "50%", transform: "translateX(-50%)", width: this.state.isMobile ? "90%" : `${window.innerHeight * 0.664}px`}}>
