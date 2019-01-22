@@ -22,12 +22,12 @@ class NavBar extends React.Component<any, any> {
     if (window.innerWidth > window.innerHeight) { // isBrowser
       this.setState({iconHeight: 10});
       this.setState({pictureSize: 10});
-      this.setState({fontSize: 40});
+      this.setState({fontSize: 30});
     }
     else { // isMobile
       this.setState({iconHeight: 5});
       this.setState({pictureSize: 20});
-      this.setState({fontSize: 90});
+      this.setState({fontSize: 70});
     }
   }
 
